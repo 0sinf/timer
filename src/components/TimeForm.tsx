@@ -7,7 +7,9 @@ export function TimeForm({ setActive }: TimeProps) {
   const { time, setTimeHandler } = useContext(TimerContext);
 
   function clickHandler() {
-    setActive(true);
+    if (!isNaN(time) && time > 1) {
+      setActive(true);
+    }
   }
 
   return (
