@@ -1,13 +1,12 @@
-import { useState } from "react";
-
 import "./App.css";
+import { TimeForm } from "./components/TimeForm";
 
 function App() {
-  const [time, setTime] = useState(0);
-
   return (
     <div className="App">
-      <div className="App_filter"></div>
+      <div className="App_filter">
+        <TimeForm />
+      </div>
     </div>
   );
 }

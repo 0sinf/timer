@@ -1,0 +1,27 @@
+.form_div {
+  position: fixed;
+
+  background-color: aliceblue;
+  border-radius: 4px;
+
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form_input {
+  border: none;
+  font-size: 2em;
+}
+
+.form_button {
+  border: none;
+  background-color: blue;
+
+  height: 100%;
+
+  color: white;
+  font-size: 1.7em;
+
+  cursor: pointer;
+}
