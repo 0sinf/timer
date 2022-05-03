@@ -1,9 +1,9 @@
 import "./TimeForm.css";
 import { useContext } from "react";
 import { TimerContext } from "../context/TimerContext";
-import { TimeFormProps } from "../@types/TimeForm";
+import { TimeProps } from "../@types/Time";
 
-export function TimeForm({ setActive }: TimeFormProps) {
+export function TimeForm({ setActive }: TimeProps) {
   const { time, setTimeHandler } = useContext(TimerContext);
 
   function clickHandler() {

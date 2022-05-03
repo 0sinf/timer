@@ -1,3 +1,3 @@
-export interface TimeFormProps {
+export interface TimeProps {
   setActive: (active: boolean) => void;
 }

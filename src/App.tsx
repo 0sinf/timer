@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { TimeForm } from "./components/TimeForm";
+import { Timer } from "./components/Timer";
 import { TimerContextProvider } from "./context/TimerContext";
 
 function App() {
@@ -10,7 +11,11 @@ function App() {
     <TimerContextProvider>
       <div className="App">
         <div className="App_filter">
-          {active ? "" : <TimeForm setActive={setActive} />}
+          {active ? (
+            <Timer setActive={setActive} />
+          ) : (
+            <TimeForm setActive={setActive} />
+          )}
         </div>
       </div>
     </TimerContextProvider>
