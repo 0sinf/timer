@@ -12,3 +12,18 @@
   background: white;
   border-radius: 4px;
 }
+
+.timer_text {
+  font-size: 15em;
+  text-align: center;
+}
+
+.timer_button {
+  position: absolute;
+
+  height: 2em;
+  width: 100%;
+  bottom: 0%;
+
+  font-size: 3em;
+}

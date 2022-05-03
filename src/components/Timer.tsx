@@ -16,5 +16,18 @@ export function Timer({ setActive }: TimeProps) {
     }
   }, 1000);
 
-  return <div className="timer_div">{time}</div>;
+  function clickHandler() {
+    setTimeHandler(0);
+    setActive(false);
+    clearTimeout(timer);
+  }
+
+  return (
+    <div className="timer_div">
+      <div className="timer_text">{time}</div>
+      <button className="button timer_button" onClick={clickHandler}>
+        다시하기
+      </button>
+    </div>
+  );
 }
