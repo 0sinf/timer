@@ -13,20 +13,20 @@ export function TimeForm({ setActive }: TimeProps) {
   }
 
   return (
-    <div className="form_div">
+    <form className="form">
       <input
-        className="form_input"
+        className="form__input"
         type="text"
         defaultValue={time}
         onChange={(event) => setTimeHandler(+event.target.value)}
       />
       <button
-        className="button form_button"
+        className="button form__button"
         type="button"
         onClick={clickHandler}
       >
         시작
       </button>
-    </div>
+    </form>
   );
 }

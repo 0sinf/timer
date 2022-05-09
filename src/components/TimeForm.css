@@ -1,26 +1,32 @@
-.form_div {
-  position: fixed;
-
-  background-color: aliceblue;
-  border-radius: 4px;
-  padding: 0.2em;
-
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.form_input {
-  width: 100%;
-  text-align: center;
-
-  border: none;
-  font-size: 2em;
-}
-
-.form_button {
+.form {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
 
-  font-size: 1.7em;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input {
+  width: 100%;
+  text-align: center;
+
+  color: white;
+  background-color: transparent;
+
+  border: none;
+  font-size: 5em;
+}
+
+.form__button {
+  margin-top: 1em;
+  padding: 0.5em 0.3em;
+  font-size: 1.5em;
+
+  background-color: darkgray;
+  border-radius: 4px;
+  border: none;
 }

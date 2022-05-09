@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
 
-  background: no-repeat center url("./assets/background.jpeg");
+  background: no-repeat center url("../public/assets/background.jpeg");
   background-size: cover;
 }
 
@@ -12,13 +12,4 @@
 
   background-color: black;
   opacity: 0.5;
-}
-
-.button {
-  border: none;
-  background-color: blue;
-
-  color: white;
-
-  cursor: pointer;
 }
