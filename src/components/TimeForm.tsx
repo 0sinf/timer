@@ -1,14 +1,13 @@
 import "./TimeForm.css";
 import { useContext } from "react";
 import { TimerContext } from "../context/TimerContext";
-import { TimeProps } from "../@types/Time";
 
-export function TimeForm({ setActive }: TimeProps) {
-  const { time, setTimeHandler } = useContext(TimerContext);
+export function TimeForm() {
+  const { time, setTimeHandler, setTickingHandler } = useContext(TimerContext);
 
   function clickHandler() {
     if (!isNaN(time) && time > 1) {
-      setActive(true);
+      setTickingHandler(true);
     }
   }
 

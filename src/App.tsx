@@ -1,22 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./App.css";
 import { TimeForm } from "./components/TimeForm";
 import { Timer } from "./components/Timer";
-import { TimerContextProvider } from "./context/TimerContext";
+import { TimerContextProvider, TimerContext } from "./context/TimerContext";
 
 function App() {
-  const [active, setActive] = useState(false);
+  const { ticking } = useContext(TimerContext);
 
   return (
     <TimerContextProvider>
       <div className="App">
-        <div className="App_filter">
-          {active ? (
-            <Timer setActive={setActive} />
-          ) : (
-            <TimeForm setActive={setActive} />
-          )}
-        </div>
+        <div className="App_filter">{ticking ? <Timer /> : <TimeForm />}</div>
       </div>
     </TimerContextProvider>
   );

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import "./Timer.css";
 import { TimerContext } from "../context/TimerContext";
-import { TimeProps } from "../@types/Time";
 
 export function Timer({ setActive }: TimeProps) {
   const { time, setTimeHandler } = useContext(TimerContext);
