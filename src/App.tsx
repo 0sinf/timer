@@ -11,7 +11,7 @@ function App() {
     <TimerContextProvider>
       <div className="App">
         <figure className="background">
-          <img src="../public/assets/background.jpeg" alt="background image" />
+          <img src="/assets/background.jpeg" alt="background image" />
         </figure>
         {tick ? <Timer setTick={setTick} /> : <TimeForm setTick={setTick} />}
       </div>
