@@ -9,7 +9,7 @@ export function Timer({ setTick }: TimerProps) {
   const timer = setTimeout(() => {
     setTimeHandler(time - 1);
 
-    if (time === 0) {
+    if (time === 1) {
       setTimeHandler(0);
       setTick(false);
       clearTimeout(timer);

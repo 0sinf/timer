@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { TimeForm } from "./components/TimeForm";
 import { Timer } from "./components/Timer";
