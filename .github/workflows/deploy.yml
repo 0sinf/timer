@@ -19,8 +19,6 @@ jobs:
         run: yarn
       - name: Build
         run: yarn run build
-      - name: Copy public to dist
-        run: cp -r public/* dist
       - name: Deploy with gh-pages
         run: |
           git config --global user.name github-actions
