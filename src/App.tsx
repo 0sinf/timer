@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./App.css";
 import { TimeForm } from "./components/TimeForm";
 import { Timer } from "./components/Timer";
@@ -10,7 +10,10 @@ function App() {
   return (
     <TimerContextProvider>
       <div className="App">
-        <div className="App_filter">{ticking ? <Timer /> : <TimeForm />}</div>
+        <figure className="background">
+          <img src="../public/assets/background.jpeg" alt="background image" />
+        </figure>
+        {ticking ? <Timer /> : <TimeForm />}
       </div>
     </TimerContextProvider>
   );
