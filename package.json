@@ -7,6 +7,11 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/young-sinf/timer.git"
+  },
+  "homepage": "https://young-sinf.github.io/timer/",
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
