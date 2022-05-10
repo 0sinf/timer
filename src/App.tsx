@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./App.css";
 import { TimeForm } from "./components/TimeForm";
 import { Timer } from "./components/Timer";
 import { TimerContextProvider, TimerContext } from "./context/TimerContext";
 
 function App() {
-  const { ticking } = useContext(TimerContext);
+  const [tick, setTick] = useState(false);
 
   return (
     <TimerContextProvider>
@@ -13,7 +13,7 @@ function App() {
         <figure className="background">
           <img src="../public/assets/background.jpeg" alt="background image" />
         </figure>
-        {ticking ? <Timer /> : <TimeForm />}
+        {tick ? <Timer setTick={setTick} /> : <TimeForm setTick={setTick} />}
       </div>
     </TimerContextProvider>
   );

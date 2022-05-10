@@ -1,24 +1,23 @@
 import { useContext } from "react";
 import "./Timer.css";
 import { TimerContext } from "../context/TimerContext";
+import { TimerProps } from "../@types/time";
 
-export function Timer() {
-  const { time, setTimeHandler, setTickingHandler } = useContext(TimerContext);
+export function Timer({ setTick }: TimerProps) {
+  const { time, setTimeHandler } = useContext(TimerContext);
 
   const timer = setTimeout(() => {
     setTimeHandler(time - 1);
 
     if (time === 0) {
       setTimeHandler(0);
-      setTickingHandler(false);
+      setTick(false);
       clearTimeout(timer);
     }
   }, 1000);
 
   function clickHandler() {
-    setTimeHandler(0);
-    setTickingHandler(false);
-    clearTimeout(timer);
+    setTick(false);
   }
 
   return (
