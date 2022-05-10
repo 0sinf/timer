@@ -2,29 +2,29 @@ import { useContext } from "react";
 import "./Timer.css";
 import { TimerContext } from "../context/TimerContext";
 
-export function Timer({ setActive }: TimeProps) {
-  const { time, setTimeHandler } = useContext(TimerContext);
+export function Timer() {
+  const { time, setTimeHandler, setTickingHandler } = useContext(TimerContext);
 
   const timer = setTimeout(() => {
     setTimeHandler(time - 1);
 
-    if (time == 0) {
+    if (time === 0) {
       setTimeHandler(0);
-      setActive(false);
+      setTickingHandler(false);
       clearTimeout(timer);
     }
   }, 1000);
 
   function clickHandler() {
     setTimeHandler(0);
-    setActive(false);
+    setTickingHandler(false);
     clearTimeout(timer);
   }
 
   return (
-    <div className="timer_div">
-      <div className="timer_text">{time}</div>
-      <button className="button timer_button" onClick={clickHandler}>
+    <div className="timer">
+      <div className="timer__text">{time}</div>
+      <button className="timer__button" onClick={clickHandler}>
         다시하기
       </button>
     </div>
